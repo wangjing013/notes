@@ -1,0 +1,24 @@
+# nodejs
+
+## fs (file system)
+
+## Buffer 
+
+> 在 [`ECMAScript 2015`](http://nodejs.cn/api/ES6) 引入 [`TypedArray`](http://nodejs.cn/s/oh3CkV) 之前，JavaScript 语言没有读取或操作二进制数据流的机制。
+
+> `Buffer` 类被引入作为 Node.js API 的一部分，使其可以在 TCP 流或文件系统操作等场景中处理二进制数据流.
+
+**特点**	
+
+* 实现了(Uint8Array)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array] 
+
+* 大小固定的、且在V8堆外分配物理内存。`Buffer`的大小在创建的时确定，且无法调整。
+* `Buffer` 类在Node.js 中是一个全局变量，因此无需使用 `require('buffer').Buffer`
+
+**创建Buffer对象的方式**
+
+* Buffer.alloc(size[,fill[,encoding]])
+
+  * size <integer> 新建的 `Buffer` 期望的长度
+  * fill   <string> |  <Buffer>  |  <integer> 用来预填充新建的 **Buffer** 的值.   **default**：0
+  * encoding <string>  如果 `fill` 是字符串，则该值是它的字符编码。**默认:** `'utf8'`
